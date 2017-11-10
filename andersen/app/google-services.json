@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "546937990480",
+    "firebase_url": "https://andersen.firebaseio.com",
+    "project_id": "andersen",
+    "storage_bucket": "andersen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546937990480:android:c46c170917381260",
+        "android_client_info": {
+          "package_name": "nordahl.andersen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546937990480-ohlnoicbouosof1voikvrba8s90pgm3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nordahl.andersen",
+            "certificate_hash": "228f94000a0854ae30cf45964a8cdc7e23138d97"
+          }
+        },
+        {
+          "client_id": "546937990480-gct2t3sc7ue7jfqbjhs9ttto5di45qg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe2TNXKx7w0LQVXMTCmbHJF1zM3KsFtQY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546937990480-gct2t3sc7ue7jfqbjhs9ttto5di45qg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

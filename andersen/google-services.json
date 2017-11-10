@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "527913766265",
+    "firebase_url": "https://nordahlandersen-eacb2.firebaseio.com",
+    "project_id": "nordahlandersen-eacb2",
+    "storage_bucket": "nordahlandersen-eacb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527913766265:android:c46c170917381260",
+        "android_client_info": {
+          "package_name": "nordahl.andersen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527913766265-il3rujad3e293lt6va0h04iid6i01eda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCegI069OjDKRWVFgfXp9JOAxLwbfuL5uk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
