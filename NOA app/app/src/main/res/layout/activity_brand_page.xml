@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.tomas.noaapp.BrandPage">
+
+
+    <ImageView
+        android:id="@+id/nordahl_jewellery_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/nordahl_jewellery"
+        android:onClick="onClickGoToListOfPosts"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:id="@+id/joanli_nor_jewellery_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/joanli"
+        android:onClick="onClickGoToListOfPosts"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:id="@+id/son_of_noa_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/sonofnoa"
+        android:onClick="onClickGoToListOfPosts"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>
