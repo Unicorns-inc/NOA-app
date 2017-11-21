@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 
@@ -40,8 +42,9 @@ public class PostAdapter extends ArrayAdapter<PostTemplates> {
         TextView locatedText = (TextView) listItemView.findViewById(R.id.content);
         locatedText.setText(member.getContent());
 
-        ImageView icon = (ImageView) listItemView.findViewById(R.id.image);
-        icon.setImageResource(member.getImage());
+        ImageView image = (ImageView)listItemView.findViewById(R.id.image);
+
+        Glide.with(parent).load(member.getUrl()).into(image);
 
 
         return listItemView;

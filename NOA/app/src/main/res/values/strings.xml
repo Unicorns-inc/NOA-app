@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">NOA</string>
     <string name="title_activity_login_menu">LoginMenuActivity</string>
+    <string name="facebook_app_id">1734106696898627</string>
+    <string name="fb_login_protocol_scheme">fb1734106696898627</string>
+
 </resources>
