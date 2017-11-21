@@ -3,12 +3,16 @@
     package="pumpkin.noa">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider android:authorities="com.facebook.app.FacebookContentProvider{1734106696898627}"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
         <activity android:name=".LoginMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,9 +43,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <provider android:authorities="com.facebook.app.FacebookContentProvider{1734106696898627}"
-            android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
+
     </application>
 
 </manifest>

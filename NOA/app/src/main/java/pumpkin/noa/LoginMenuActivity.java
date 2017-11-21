@@ -59,19 +59,8 @@ public class LoginMenuActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.content_login_menu);
 
-
-        // Views
-        // = findViewById(R.id.status);
-        //mDetailTextView = findViewById(R.id.detail);
-        //findViewById(R.id.button_facebook_signout).setOnClickListener(this);
-
-        // [START initialize_auth]
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        // [END initialize_auth]
 
-        // [START initialize_fblogin]
-        // Initialize Facebook Login button
         mCallbackManager = CallbackManager.Factory.create();
 
         final LoginButton loginButton = (LoginButton)findViewById(R.id.login_button);
