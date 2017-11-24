@@ -114,9 +114,10 @@ public class LoginMenuActivity extends AppCompatActivity {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         // If already logged in show the home view
         if (accessToken != null) {//<- IMPORTANT
+            signOut();
             Intent intent = new Intent(LoginMenuActivity.this,BrandPage.class);
             startActivity(intent);
-            finish();//<- IMPORTANT
+            finish();
         }
     }
 

@@ -130,12 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /*postList.add(new PostTemplates("Valentine's Day", "bla bla bla LOVE"));
-        postList.add(new PostTemplates("8 March", "bla bla bla Women"));
-        postList.add(new PostTemplates("Birthday specials", "bla bla bla BD"));
-        postList.add(new PostTemplates("You fucked up and your gf is mad? ", "bla bla bla Perfect Gift"));*/
-
-
 
 
 
