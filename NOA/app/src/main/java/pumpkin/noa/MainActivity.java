@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("Posts/SonOfNoa");
         Bundle bundle = getIntent().getExtras();
         String key = bundle.getString("key");
+
+
         if(key.equals("son_of_noa"))
         {
             logo.setImageResource(R.drawable.sonofnoa);
