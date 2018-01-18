@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="nordahl.andersen.Main2Activity">
 
-    <android.support.design.widget.AppBarLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:gravity="center"
+        android:text="Register Account"
+        android:fontFamily="@font/"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></Spinner>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="73dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Birthday"/>
 
-    </android.support.design.widget.AppBarLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:textColor="#6e8b3d"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="155dp" />
 
-    <include layout="@layout/content_main2" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="317dp"
-        android:layout_height="437dp"
+        android:layout_width="320dp"
+        android:layout_height="77dp"
         android:gravity="center"
-        android:text="Logged in. This is activity 2"
+        android:text="Register Account"
         android:textColor="@color/com_facebook_blue"
-        android:textSize="20dp" />
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="230dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
-</android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>
