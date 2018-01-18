@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,7 +57,7 @@ public class LoginMenuActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
+
         setContentView(R.layout.content_login_menu);
 
         mAuth = FirebaseAuth.getInstance();
@@ -73,12 +74,12 @@ public class LoginMenuActivity extends AppCompatActivity {
                 handleFacebookAccessToken(loginResult.getAccessToken());
 
                 Log.d("LOGIN_SUCCESS", "Success");
-                LoginManager.getInstance().logInWithPublishPermissions(
-                        LoginMenuActivity.this,
+                LoginManager.getInstance().logInWithPublishPermissions(LoginMenuActivity.this,
                         Arrays.asList("publish_actions"));
-                loginButton.setVisibility(View.INVISIBLE); //<- IMPORTANT
-                Intent intent = new Intent(LoginMenuActivity.this,BrandPage.class);
 
+                loginButton.setVisibility(View.INVISIBLE); //<- IMPORTANT
+
+                Intent intent = new Intent(LoginMenuActivity.this,BrandPage.class);
                 startActivity(intent);
                 finish();//<- IMPORTANT
             }
@@ -114,7 +115,6 @@ public class LoginMenuActivity extends AppCompatActivity {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         // If already logged in show the home view
         if (accessToken != null) {//<- IMPORTANT
-            signOut();
             Intent intent = new Intent(LoginMenuActivity.this,BrandPage.class);
             startActivity(intent);
             finish();

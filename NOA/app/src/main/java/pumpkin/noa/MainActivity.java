@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.facebook.share.ShareApi;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.ShareOpenGraphAction;
@@ -39,7 +40,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,11 +62,9 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("Posts/SonOfNoa");
         Bundle bundle = getIntent().getExtras();
         String key = bundle.getString("key");
-
-
         if(key.equals("son_of_noa"))
         {
-            logo.setImageResource(R.drawable.sonofnoa);
+            logo.setImageResource(R.drawable.sonofnoa2);
             myRef = database.getReference("Posts/SonOfNoa");
         }
         if(key.equals("joanli_nor_jewellery"))
@@ -115,12 +114,17 @@ public class MainActivity extends AppCompatActivity {
 
             TextView url = (TextView)row.getChildAt(4);
             TextView content = (TextView)row.getChildAt(1);
-            //ImageView image = (ImageView)row.getChildAt(2);
-            //Toast.makeText(this,url.getText(),Toast.LENGTH_LONG).show();
+            ImageView image = (ImageView)row.getChildAt(2);
+            Toast.makeText(this,url.getText(),Toast.LENGTH_LONG).show();
+
+
 
             ShareLinkContent contentLink = new ShareLinkContent.Builder()
                     .setContentUrl(Uri.parse(url.getText().toString()))
                     .setQuote(content.getText().toString())
+                    .setImageUrl(Uri.parse(url.getText().toString()))
+
+
                     .build();
 
 
@@ -128,6 +132,41 @@ public class MainActivity extends AppCompatActivity {
             ShareDialog.show(this, contentLink);
 
         }
+    }
+    /*public void onClickShare(View v)
+    {
+        if(ShareDialog.canShow(SharePhotoContent.class)) {
+            Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.brand);
+
+            ConstraintLayout row =(ConstraintLayout)v.getParent();
+
+            TextView url = (TextView)row.getChildAt(4);
+            TextView contentText = (TextView)row.getChildAt(1);
+            ImageView image2 = (ImageView)row.getChildAt(2);
+            SharePhoto photo = new SharePhoto.Builder()
+                    .setBitmap(image).setCaption(contentText.toString())
+                    .build();
+
+            SharePhotoContent content = new SharePhotoContent.Builder()
+                    .addPhoto(photo)
+
+                    .build();
+
+
+            ShareApi.share(content,null);
+        }
+        else
+        {
+            Toast.makeText(this,"Fail",Toast.LENGTH_LONG).show();
+        }
+
+
+    }*/
+
+    public void onClickBack(View v)
+    {
+        Intent goBack = new Intent(MainActivity.this,BrandPage.class);
+        startActivity(goBack);
     }
 
 
